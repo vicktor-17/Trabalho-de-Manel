@@ -207,7 +207,7 @@ As cores ficam como variáveis no topo do `style.css`:
 Este projeto é de uso pessoal e educacional. Defina aqui a licença de sua preferência (por exemplo, [MIT](https://choosealicense.com/licenses/mit/)) antes de tornar o repositório público.
 
 ---
-https://vicktor-17.github.io/Trabalho-de-Manel/
+
 <div align="center">
 
 Feito com HTML, CSS e muita vontade de criar jogos 🎮
