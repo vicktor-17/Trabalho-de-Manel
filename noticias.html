@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fofocas | GAMEPOINT</title>
+    <meta name="description"
+        content="Notícias, rumores e lançamentos do mundo dos games, para você ficar sempre antenado.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@600;700&family=Nunito+Sans:wght@400;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="noticias.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="wrap">
+            <a class="logo" href="index.html">GAMEPOINT</a>
+            <nav>
+                <a href="index.html">Jogos</a>
+                <a href="lancamento.html">Meu jogo</a>
+                <a href="noticias.html" aria-current="page">Fofocas</a>
+                <a href="perfil.html">Perfil</a>
+            </nav>
+        </div>
+    </header>
+
+    <main id="conteudo">
+
+        <div class="wrap hero">
+            <h1>Fofocas dos games</h1>
+            <p>
+                Novidades, rumores e lançamentos para você ficar sempre antenado.
+                <strong id="atualizado"></strong>
+            </p>
+        </div>
+
+        <section>
+            <div class="wrap">
+                <h2>Últimas notícias</h2>
+
+                <div class="filters" role="group" aria-label="Filtrar por tipo">
+                    <button data-filtro="todos" aria-pressed="true">Tudo</button>
+                    <button data-filtro="lancamento" aria-pressed="false">Lançamentos</button>
+                    <button data-filtro="anuncio" aria-pressed="false">Anúncios</button>
+                    <button data-filtro="rumor" aria-pressed="false">Rumores</button>
+                    <button data-filtro="mercado" aria-pressed="false">Mercado</button>
+                </div>
+
+                <div class="grid" id="lista-noticias"></div>
+
+                <noscript>
+                    <p>Ative o JavaScript para ver as notícias.</p>
+                </noscript>
+
+                <p class="n-aviso">
+                    Os textos são resumos em palavras próprias, com link para a matéria original.
+                    Rumores aparecem com borda tracejada: ainda não são anúncios oficiais.
+                </p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="wrap">
+            © 2026 GAMEPOINT · Feito com HTML, CSS e muita vontade de criar jogos
+        </div>
+    </footer>
+
+    <script src="noticias.js"></script>
+</body>
+
+</html>

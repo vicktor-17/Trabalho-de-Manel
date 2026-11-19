@@ -1,0 +1,528 @@
+:root {
+    --bg: #14142b;
+    --panel: #1f1f40;
+    --text: #f2f0ff;
+    --muted: #aaa8d0;
+    --blue: #3d5afe;
+    --mint: #5bf0c0;
+    --pink: #ff4f9a;
+    --sun: #ffd23f;
+    --font-d: 'Chakra Petch', system-ui, sans-serif;
+    --font-b: 'Nunito Sans', system-ui, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0
+}
+
+html {
+    scroll-behavior: smooth
+}
+
+body {
+    background: var(--bg);
+    color: var(--text);
+    font: 1.05rem/1.6 var(--font-b)
+}
+
+main .wrap img{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h1,
+h2,
+h3 {
+    font-family: var(--font-d);
+    line-height: 1.1
+}
+
+a {
+    color: var(--mint)
+}
+
+:focus-visible {
+    outline: 3px solid var(--sun);
+    outline-offset: 3px
+}
+
+.wrap {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px
+}
+
+header {
+    border-bottom: 3px solid var(--blue);
+    background: var(--panel)
+}
+
+header .wrap {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 14px;
+    padding-bottom: 14px
+}
+
+.logo {
+    font: 700 1.4rem var(--font-d);
+    color: var(--sun);
+    text-decoration: none
+}
+
+nav a {
+    color: var(--text);
+    text-decoration: none;
+    margin-left: 18px;
+    padding-bottom: 3px
+}
+
+nav a[aria-current=page] {
+    border-bottom: 3px solid var(--pink)
+}
+
+nav a:hover {
+    color: var(--mint)
+}
+
+.hero {
+    padding: 70px 0 50px
+}
+
+.hero h1 {
+    font-size: clamp(2.4rem, 7vw, 4.6rem);
+    max-width: 14ch
+}
+
+.hero p {
+    max-width: 55ch;
+    color: var(--muted);
+    margin: 18px 0 26px
+}
+
+.btn {
+    display: inline-block;
+    background: var(--pink);
+    color: #fff;
+    font: 700 1rem var(--font-d);
+    padding: 12px 22px;
+    border: 0;
+    text-decoration: none;
+    cursor: pointer;
+    box-shadow: 5px 5px 0 var(--sun);
+    transition: transform .1s, box-shadow .1s
+}
+
+.btn:hover {
+    transform: translate(3px, 3px);
+    box-shadow: 2px 2px 0 var(--sun)
+}
+
+section {
+    padding: 40px 0
+}
+
+section>.wrap>h2 {
+    font-size: 2rem;
+    margin-bottom: 22px
+}
+
+.filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 24px
+}
+
+.filters button {
+    background: transparent;
+    color: var(--text);
+    border: 2px solid var(--blue);
+    padding: 6px 14px;
+    font: 600 .95rem var(--font-d);
+    cursor: pointer
+}
+
+.filters button[aria-pressed=true] {
+    background: var(--blue)
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 24px
+}
+
+.card {
+    background: var(--panel);
+    border: 2px solid var(--blue);
+    padding: 20px;
+    box-shadow: 6px 6px 0 var(--blue)
+}
+
+.card[hidden] {
+    display: none
+}
+
+.card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 6px
+}
+
+.card p {
+    color: var(--muted);
+    font-size: .95rem
+}
+
+.card .meta {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 14px;
+    font: 600 .9rem var(--font-d)
+}
+
+.nota {
+    color: var(--sun);
+    font-size: 1.2rem
+}
+
+.tag {
+    color: var(--mint)
+}
+
+.split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    align-items: center
+}
+
+.screen {
+    aspect-ratio: 16/10;
+    background: linear-gradient(135deg, var(--blue), var(--pink));
+    border: 3px solid var(--sun);
+    display: grid;
+    place-items: center;
+    font: 700 1.6rem var(--font-d);
+    text-align: center;
+    padding: 20px
+}
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 18px
+}
+
+.stat {
+    border-left: 4px solid var(--mint);
+    padding-left: 14px
+}
+
+.stat b {
+    display: block;
+    font: 700 2rem var(--font-d)
+}
+
+.bar {
+    height: 14px;
+    background: #0b0b1c;
+    border: 2px solid var(--text);
+    margin: 6px 0 16px
+}
+
+.bar i {
+    display: block;
+    height: 100%;
+    background: var(--mint)
+}
+
+form {
+    display: grid;
+    gap: 12px;
+    max-width: 460px
+}
+
+input,
+textarea {
+    background: var(--panel);
+    color: var(--text);
+    border: 2px solid var(--blue);
+    padding: 10px;
+    font: inherit
+}
+
+#msg {
+    color: var(--mint);
+    min-height: 1.5em
+}
+
+footer {
+    border-top: 3px solid var(--blue);
+    padding: 26px 0;
+    color: var(--muted);
+    text-align: center;
+    font-size: .9rem
+}
+
+@media(max-width:700px) {
+    .split {
+        grid-template-columns: 1fr
+    }
+
+    nav a {
+        margin: 0 14px 0 0
+    }
+}
+
+.banner {
+    display: block;
+    width: 100%;
+    max-width: 700px;
+    margin-bottom: 24px;
+    border: 3px solid var(--blue);
+    box-shadow: 6px 6px 0 var(--pink)
+}
+
+.screen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block
+}
+
+@media(prefers-reduced-motion:reduce) {
+    * {
+        transition: none !important;
+        scroll-behavior: auto !important
+    }
+}
+
+/* ===== ANIMAÇÕES ===== */
+
+/* 1) Botões: apertar ao clicar + anel pulsando no botão principal */
+.btn {
+    position: relative
+}
+
+.btn:active {
+    transform: translate(6px, 6px);
+    box-shadow: 0 0 0 var(--sun)
+}
+
+.btn:not(.btn--sec)::after {
+    content: "";
+    position: absolute;
+    inset: -6px;
+    border: 3px solid var(--pink);
+    opacity: 0;
+    pointer-events: none;
+    animation: anel 2.2s ease-out infinite;
+}
+
+@keyframes anel {
+    0% {
+        opacity: .8;
+        transform: scale(1)
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(1.12)
+    }
+}
+
+/* 2) Filtros: sobem ao passar o mouse */
+.filters button {
+    transition: transform .15s
+}
+
+.filters button:hover {
+    transform: translateY(-3px)
+}
+
+.filters button:active {
+    transform: translateY(1px)
+}
+
+/* 3) Cards: entram subindo e levantam no hover */
+.card {
+    transition: transform .2s, box-shadow .2s;
+    animation: subir .5s ease backwards
+}
+
+.card:hover {
+    transform: translate(-3px, -3px);
+    box-shadow: 9px 9px 0 var(--blue)
+}
+
+.card:nth-child(2) {
+    animation-delay: .08s
+}
+
+.card:nth-child(3) {
+    animation-delay: .16s
+}
+
+.card:nth-child(4) {
+    animation-delay: .24s
+}
+
+.card:nth-child(5) {
+    animation-delay: .32s
+}
+
+.card:nth-child(6) {
+    animation-delay: .4s
+}
+
+@keyframes subir {
+    from {
+        opacity: 0;
+        transform: translateY(18px)
+    }
+
+    to {
+        opacity: 1;
+        transform: none
+    }
+}
+
+/* 4) Fundo: estrelas piscando e deslizando devagar */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    background-image:
+        radial-gradient(2px 2px at 10% 20%, #fff, transparent),
+        radial-gradient(2px 2px at 30% 70%, #fff, transparent),
+        radial-gradient(3px 3px at 50% 40%, var(--sun), transparent),
+        radial-gradient(2px 2px at 70% 15%, #fff, transparent),
+        radial-gradient(2px 2px at 85% 60%, var(--mint), transparent),
+        radial-gradient(3px 3px at 20% 90%, var(--pink), transparent),
+        radial-gradient(2px 2px at 92% 88%, #fff, transparent);
+    background-size: 600px 600px;
+    animation: piscar 4s ease-in-out infinite alternate, deslizar 90s linear infinite;
+}
+
+@keyframes piscar {
+    from {
+        opacity: .25
+    }
+
+    to {
+        opacity: .9
+    }
+}
+
+@keyframes deslizar {
+    to {
+        background-position: 0 600px
+    }
+}
+
+/* Respeita quem prefere menos movimento */
+@media (prefers-reduced-motion:reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation: none !important
+    }
+}
+
+/* ===== FUNDO EXTRA ===== */
+
+/* 1) Névoa colorida flutuando */
+body::after {
+    content: "";
+    position: fixed;
+    inset: -20%;
+    z-index: -1;
+    pointer-events: none;
+    background:
+        radial-gradient(40% 35% at 20% 30%, rgba(255, 79, 216, .28), transparent 70%),
+        radial-gradient(35% 40% at 80% 25%, rgba(47, 123, 255, .30), transparent 70%),
+        radial-gradient(45% 35% at 60% 80%, rgba(61, 232, 200, .22), transparent 70%);
+    animation: flutuar 24s ease-in-out infinite alternate;
+}
+
+@keyframes flutuar {
+    from {
+        transform: translate(-3%, -2%) scale(1)
+    }
+
+    to {
+        transform: translate(3%, 2%) scale(1.1)
+    }
+}
+
+/* 2) Chão retrô com grade neon */
+html::before {
+    content: "";
+    position: fixed;
+    left: -50%;
+    right: -50%;
+    bottom: 0;
+    height: 45vh;
+    z-index: -1;
+    pointer-events: none;
+    opacity: .35;
+    background-image:
+        linear-gradient(rgba(255, 79, 216, .6) 2px, transparent 2px),
+        linear-gradient(90deg, rgba(61, 232, 200, .5) 2px, transparent 2px);
+    background-size: 60px 60px;
+    transform: perspective(300px) rotateX(60deg);
+    transform-origin: bottom;
+    -webkit-mask-image: linear-gradient(to top, #000, transparent);
+    mask-image: linear-gradient(to top, #000, transparent);
+    animation: chao 2.5s linear infinite;
+}
+
+@keyframes chao {
+    to {
+        background-position: 0 60px
+    }
+}
+
+/* 3) Estrela cadente */
+html::after {
+    content: "";
+    position: fixed;
+    top: 8%;
+    left: -10%;
+    width: 120px;
+    height: 2px;
+    z-index: -1;
+    pointer-events: none;
+    opacity: 0;
+    background: linear-gradient(90deg, transparent, #fff);
+    animation: cadente 9s ease-in infinite;
+}
+
+@keyframes cadente {
+    0% {
+        opacity: 0;
+        transform: translate(0, 0) rotate(25deg)
+    }
+
+    3% {
+        opacity: 1
+    }
+
+    12% {
+        opacity: 0;
+        transform: translate(70vw, 35vh) rotate(25deg)
+    }
+
+    100% {
+        opacity: 0;
+        transform: translate(70vw, 35vh) rotate(25deg)
+    }
+}

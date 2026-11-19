@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@600;700&family=Nunito+Sans:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>GAMEPOINT: reviews e catálogo de jogos</title>
+</head>
+
+<body>
+    <header>
+        <div class="wrap">
+            <a class="logo" href="index.html">GAMEPOINT</a>
+            <nav>
+                <a href="index.html" aria-current="page">Jogos</a>
+                <a href="lancamento.html">Meu jogo</a>
+                <a href="noticias.html">Fofocas</a>
+                <a href="perfil.html">Perfil</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="wrap hero">
+            <img src="gamepoint.png" alt="GAMEPOINT - O ponto de encontro dos games" class="banner">
+            <h1>Reviews de jogos sem enrolação</h1>
+            <p>Notas honestas, sem spoilers. Escolha um gênero e veja o que vale o seu tempo.</p>
+            <a class="btn" href="#catalogo">Ver catálogo</a>
+        </div>
+
+        <section id="catalogo">
+            <div class="wrap">
+                <h2>Catálogo</h2>
+                <div class="filters" role="group" aria-label="Filtrar por gênero">
+                    <button data-filtro="todos" aria-pressed="true">Todos</button>
+                    <button data-filtro="aventura" aria-pressed="false">Aventura</button>
+                    <button data-filtro="corrida" aria-pressed="false">Corrida</button>
+                    <button data-filtro="puzzle" aria-pressed="false">Puzzle</button>
+                </div>
+                <div class="grid">
+                    <article class="card" data-genero="aventura">
+                        <h3>Ilha Quebrada</h3>
+                        <p>Explore ruínas flutuantes com um gancho que muda a gravidade.</p>
+                        <div class="meta"><span class="tag">Aventura</span><span class="nota">★ 9,0</span></div>
+                    </article>
+                    <article class="card" data-genero="corrida">
+                        <h3>Turbo Sertão</h3>
+                        <p>Corridas de buggy por estradas de terra, com chuva e poeira de verdade.</p>
+                        <div class="meta"><span class="tag">Corrida</span><span class="nota">★ 8,2</span></div>
+                    </article>
+                    <article class="card" data-genero="puzzle">
+                        <h3>Caixas Mágicas</h3>
+                        <p>Empurre blocos, abra portas e descubra o truque de cada sala.</p>
+                        <div class="meta"><span class="tag">Puzzle</span><span class="nota">★ 8,7</span></div>
+                    </article>
+                    <article class="card" data-genero="aventura">
+                        <h3>Farol Distante</h3>
+                        <p>Uma história curta e bonita sobre um faroleiro e uma tempestade.</p>
+                        <div class="meta"><span class="tag">Aventura</span><span class="nota">★ 7,8</span></div>
+                    </article>
+                    <article class="card" data-genero="corrida">
+                        <h3>Pista Neon</h3>
+                        <p>Corrida futurista rápida, boa para partidas de cinco minutos.</p>
+                        <div class="meta"><span class="tag">Corrida</span><span class="nota">★ 7,5</span></div>
+                    </article>
+                    <article class="card" data-genero="puzzle">
+                        <h3>Mapa Dobrado</h3>
+                        <p>Dobre o mapa para criar caminhos que não existiam.</p>
+                        <div class="meta"><span class="tag">Puzzle</span><span class="nota">★ 9,3</span></div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>© 2026 GAMEPOINT. Feito no VS Code.</footer>
+    <script src="script.js"></script>
+</body>
+
+</html>

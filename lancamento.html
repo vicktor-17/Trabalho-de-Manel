@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@600;700&family=Nunito+Sans:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Ilha Quebrada: o jogo</title>
+</head>
+
+<body>
+    <header>
+        <div class="wrap">
+            <a class="logo" href="index.html">GAMEPOINT</a>
+            <nav>
+                <a href="index.html">Jogos</a>
+                <a href="lancamento.html" aria-current="page">Meu jogo</a>
+                <a href="noticias.html">Fofocas</a>
+                <a href="perfil.html">Perfil</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="wrap hero split">
+            <div>
+                <h1>Ilha Quebrada</h1>
+                <p>Um jogo de aventura onde você vira a gravidade com um gancho e explora ruínas no céu. Lançamento
+                    previsto para 2027.</p>
+                <a class="btn" href="#lista">Entrar na lista de espera</a>
+            </div>
+            <div class="screen"><img src="jogo.png" alt="imagem do jogo ilha quebrada"></div>
+        </div>
+
+        <section>
+            <div class="wrap">
+                <h2>O que você vai fazer</h2>
+                <div class="grid">
+                    <article class="card">
+                        <h3>Mudar a gravidade</h3>
+                        <p>Use o gancho para andar nas paredes e no teto.</p>
+                    </article>
+                    <article class="card">
+                        <h3>Explorar 12 ilhas</h3>
+                        <p>Cada ilha tem um segredo e um chefe.</p>
+                    </article>
+                    <article class="card">
+                        <h3>Jogar sem pressa</h3>
+                        <p>Sem tempo limite e sem game over punitivo.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="lista">
+            <div class="wrap">
+                <h2>Receba o aviso de lançamento</h2>
+                <form>
+                    <input type="email" placeholder="Seu e-mail" aria-label="Seu e-mail" required>
+                    <button class="btn" type="submit">Entrar na lista</button>
+                    <p id="msg" role="status"></p>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>© 2026 GAMEPOINT. Feito no VS Code.</footer>
+    <script src="script.js"></script>
+</body>
+
+</html>

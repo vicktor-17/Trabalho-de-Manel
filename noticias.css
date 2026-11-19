@@ -1,0 +1,100 @@
+/* ===== Estilos da página de notícias (usa as variáveis do style.css) ===== */
+:root {
+    --n-blue: var(--blue, #2f7bff);
+    --n-pink: var(--pink, #ff4fd8);
+    --n-mint: var(--mint, #3de8c8);
+    --n-sun: var(--sun, #ffb020);
+    --n-muted: var(--muted, #b9b4d6);
+}
+
+/* Texto "Atualizado em..." */
+#atualizado {
+    color: var(--n-sun)
+}
+
+/* Aviso no fim da lista */
+.n-aviso {
+    margin-top: 28px;
+    color: var(--n-muted);
+    font-size: .9rem;
+    max-width: 70ch;
+}
+
+/* Cabeçalho de cada card: tipo + data */
+.n-topo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 12px;
+    font: 600 .8rem var(--font-d);
+}
+
+.n-topo time {
+    color: var(--n-muted)
+}
+
+/* Etiqueta do tipo de notícia */
+.n-tag {
+    padding: 3px 10px;
+    border: 2px solid currentColor;
+    text-transform: uppercase;
+    letter-spacing: .06em;
+}
+
+.n-tag--lancamento {
+    color: var(--n-mint)
+}
+
+.n-tag--anuncio {
+    color: var(--n-sun)
+}
+
+.n-tag--rumor {
+    color: var(--n-pink)
+}
+
+.n-tag--mercado {
+    color: var(--n-blue)
+}
+
+/* Link da fonte */
+.n-link {
+    display: inline-block;
+    margin-top: 14px;
+    color: var(--n-mint);
+    text-decoration: none;
+    font: 700 .9rem var(--font-d);
+}
+
+.n-link:hover {
+    text-decoration: underline
+}
+
+/* Rumor: borda tracejada */
+.card.n-rumor {
+    border-style: dashed
+}
+
+/* Destaque do dia: ocupa a linha inteira */
+.card.n-destaque {
+    grid-column: 1 / -1;
+    padding: 28px;
+    border-color: var(--n-sun);
+    box-shadow: 8px 8px 0 var(--n-pink);
+}
+
+.card.n-destaque h3 {
+    font-size: clamp(1.5rem, 4vw, 2.2rem);
+    margin-bottom: 10px
+}
+
+.card.n-destaque p {
+    font-size: 1.05rem
+}
+
+@media (max-width:520px) {
+    .card.n-destaque {
+        padding: 20px
+    }
+}

@@ -1,0 +1,270 @@
+/* ===== Estilos da página de perfil (usa as variáveis do style.css) ===== */
+:root {
+    --p-blue: var(--blue, #2f7bff);
+    --p-pink: var(--pink, #ff4fd8);
+    --p-mint: var(--mint, #3de8c8);
+    --p-sun: var(--sun, #ffb020);
+    --p-panel: var(--panel, #1b1b3a);
+    --p-text: var(--text, #eee9f7);
+    --p-muted: var(--muted, #b9b4d6);
+}
+
+img {
+    max-width: 100%
+}
+
+/* Link de acessibilidade (aparece só ao apertar Tab) */
+.skip {
+    position: absolute;
+    left: -999px;
+    top: 0
+}
+
+.skip:focus {
+    left: 10px;
+    top: 10px;
+    z-index: 10;
+    background: #000;
+    color: #fff;
+    padding: 8px 14px
+}
+
+/* ===== Apresentação ===== */
+.p-hero {
+    padding: 60px 0 30px
+}
+
+.p-hero__grid {
+    display: grid;
+    grid-template-columns: 1.2fr .8fr;
+    gap: 48px;
+    align-items: center;
+}
+
+.p-etiqueta {
+    display: inline-block;
+    color: var(--p-mint);
+    border: 2px solid var(--p-mint);
+    padding: 5px 14px;
+    font: 700 .85rem var(--font-d);
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    margin-bottom: 18px;
+}
+
+.p-hero h1 {
+    font-size: clamp(2.2rem, 6vw, 4rem);
+    line-height: 1.05;
+    margin-bottom: 18px;
+}
+
+.destaque {
+    color: var(--p-sun)
+}
+
+.p-lead {
+    max-width: 52ch;
+    color: var(--p-muted);
+    font-size: 1.1rem;
+    margin-bottom: 26px;
+}
+
+.p-acoes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px
+}
+
+/* Botão secundário (contorno) */
+.btn.btn--sec {
+    background: transparent;
+    color: var(--p-text);
+    border: 2px solid var(--p-blue);
+    padding: 10px 20px;
+    box-shadow: 4px 4px 0 var(--p-blue);
+}
+
+.btn.btn--sec:hover {
+    box-shadow: 2px 2px 0 var(--p-blue)
+}
+
+/* Foto */
+.p-foto {
+    margin: 0 0 0 auto;
+    width: 100%;
+    max-width: 400px;
+    background: linear-gradient(135deg, var(--p-blue), var(--p-pink));
+    border: 3px solid var(--p-sun);
+    box-shadow: 10px 10px 0 var(--p-pink);
+}
+
+.p-foto img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+}
+
+/* ===== Sobre ===== */
+.p-sobre {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 32px;
+    align-items: start;
+}
+
+.p-sobre p {
+    color: var(--p-muted);
+    max-width: 60ch
+}
+
+.p-fatos {
+    list-style: none;
+    display: grid;
+    gap: 12px;
+}
+
+.p-fatos li {
+    background: var(--p-panel);
+    border: 2px solid var(--p-blue);
+    border-left: 6px solid var(--p-mint);
+    padding: 12px 16px;
+}
+
+/* ===== Projetos ===== */
+.p-link {
+    color: var(--p-mint);
+    text-decoration: none;
+    font: 700 .9rem var(--font-d);
+}
+
+.p-link:hover {
+    text-decoration: underline
+}
+
+/* ===== Habilidades ===== */
+.p-skills {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 28px;
+}
+
+.p-skills h3 {
+    margin-bottom: 12px;
+    color: var(--p-sun)
+}
+
+.chips {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.chips li {
+    background: var(--p-panel);
+    border: 2px solid var(--p-blue);
+    padding: 6px 14px;
+    font: 600 .95rem var(--font-d);
+}
+
+/* ===== Lives ===== */
+.p-live {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    padding: 28px;
+    border: 3px solid var(--p-sun);
+    background: linear-gradient(135deg, rgba(47, 123, 255, .25), rgba(255, 79, 216, .25));
+    box-shadow: 8px 8px 0 var(--p-blue);
+}
+
+.p-live h2 {
+    font-size: 1.8rem;
+    margin-bottom: 8px
+}
+
+.p-live p {
+    color: var(--p-text);
+    max-width: 48ch
+}
+
+/* ===== Contato ===== */
+.p-contato-txt {
+    color: var(--p-muted);
+    margin-bottom: 18px
+}
+
+.p-links {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+.p-links a {
+    display: inline-block;
+    color: var(--p-text);
+    text-decoration: none;
+    background: var(--p-panel);
+    border: 2px solid var(--p-blue);
+    padding: 10px 20px;
+    font: 700 1rem var(--font-d);
+    box-shadow: 4px 4px 0 var(--p-pink);
+}
+
+.p-links a:hover {
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0 var(--p-pink);
+}
+
+/* ===== Responsivo ===== */
+@media (max-width:800px) {
+    .p-hero {
+        padding: 36px 0 20px
+    }
+
+    .p-hero__grid {
+        grid-template-columns: 1fr;
+        gap: 32px
+    }
+
+    .p-foto {
+        order: -1;
+        margin: 0 auto;
+        max-width: 300px
+    }
+
+    .p-sobre {
+        grid-template-columns: 1fr
+    }
+}
+
+@media (max-width:520px) {
+    .p-acoes .btn {
+        width: 100%;
+        text-align: center
+    }
+
+    .p-live {
+        padding: 22px;
+        flex-direction: column;
+        align-items: flex-start
+    }
+
+    .p-live .btn {
+        width: 100%;
+        text-align: center
+    }
+
+    .p-links a {
+        width: 100%;
+        text-align: center
+    }
+
+    .p-links li {
+        flex: 1 1 100%
+    }
+}
